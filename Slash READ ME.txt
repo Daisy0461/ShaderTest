@@ -1,0 +1,20 @@
+ Unreal Engine을 사용하여 게임 콘텐츠를 제작하면서 적의 행동 패턴을 개발하는 다양한 기술과 기능을 활용한 경험이 있습니다. 
+ 먼저, 적의 상태에 따라 다양한 행동 패턴을 구현했습니다. 예를 들어, Partrolling 동작에서는 적이 일정한 경로를 따라 이동하고, 플레이어가 가까이 다가가면 Chase 동작으로 전환되어 쫓아가도록 설정했습니다. 또한 Attack 동작에서는 적이 공격을 실행하고, Hitting 동작에서는 플레이어에게 피격 당할 때의 반응을 자연스럽게 구현했습니다. 적이 죽을 때는 Death 동작으로 전환되며, 적의 행동이 끝나면 적의 AI는 다음 행동을 결정하기 위해 다시 상태를 판단합니다. 
+
+ 적의 움직임을 자연스럽게 만들기 위해 Blend Space, Root Motion 및 Motion Warping 기술을 적용했습니다. 이를 통해 적이 자연스럽게 공격하는 모습을 구현했습니다. 그리고 MainCharactor와의 거리를 계산해서 AutoAttack을 실행할지 Motion Warping을 활용해서 먼 거리에서부터 공격할지 결정하였습니다. 이러한 기술을 활용하여 플레이어와의 상호 작용이 보다 현실적이고 몰입감 있게 느껴지도록 했습니다. 또한, Hit React Animation을 적용하여 적이 플레이어의 공격에 반응하는 모습을 더욱 현실적으로 만들었습니다. 특히 Hit Reaction Animation에서는 FVector::DotProduct와 FVector::CrossProduct를 활용해서 Enemy가 맞은 방향에 따라 각각 다른 Animation을 재생하도록 하였습니다. 그리고 Animation Montage를 활용하여 Sound와 Trail등을 추가하여 더욱 게임에 몰입을 할 수 있도록 제작하였습니다.
+
+ 게임 플레이를 보다 흥미롭게 만들기 위해 소울라이크 게임의 대표적인 특수 기능도 추가했습니다. 적의 공격을 막기 위한 Parry 기능을 구현하여 플레이어와의 전투를 보다 전략적으로 만들었습니다. Parry에 대한 보상으로 젤다와 비슷하게 시간이 느리게 흐르도록 하되 MainCharactor는 동일한 속도로 추가적으로 공격을 가할 수 있도록 제작하였습니다. 죽은 Enemy는 아이템을 떨어트려 보상을 얻게하는 등 다양한 Enemy와 관련된 기능을 제작하였습니다. Enemy의 종류는 Warroir와 Mage,Golem, Raptor를 현재 제작하였으며 추가적으로 GAS 활용 및 더 다양한 종류의 Enemy를 제작 및 공부할 예정입니다.
+
+Slash READ Play
+
+이동  : WASD
+화면 이동 : 마우스
+장비 줍기 & 장비 해제 : E
+공격 : 마우스 좌 Click
+가드 : 마우스 Press
+Parry : 공격 타이밍에 맟줘서 가드
+구르기 : Space Bar
+스킬 : Num 1, 2, 3
+
+
+
